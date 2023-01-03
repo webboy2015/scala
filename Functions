@@ -1,0 +1,17 @@
+// EXERCISE
+// Strings have a built-in .toUpperCase method. For example, "foo".toUpperCase gives you back FOO.
+// Write a function that converts a string to upper-case, and use that function of a few test strings.
+// Then, do the same thing using a function literal instead of a separate, named function.
+
+//Simple function which accepts a String and converts it into Upper Case
+def capitalizeString(x: String): String = {
+x.toUpperCase()
+}
+println(capitalizeString("jack"))
+// Function that accepts two parameters a String
+// and a function and applies the function to string
+def transformString(x : String, f : String => String ): String = { f(x)}
+println(transformString("jack", capitalizeString))
+
+// FUnction literal where we do not declare the function
+println(transformString("jack", x=>x.toUpperCase()))
